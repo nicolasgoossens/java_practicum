@@ -12,6 +12,7 @@ public class Quiz {
 	private QuizStatus quizStatus;
 	private List<Opdracht> opdrachten = new LinkedList<Opdracht>();
 
+	//test
 	public Quiz() {
 	}
 
