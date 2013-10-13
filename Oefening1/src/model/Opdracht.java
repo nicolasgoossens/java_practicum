@@ -6,7 +6,7 @@ public class Opdracht {
 	private String antwoord;
 	private int maxAantalPogingen;
 	private String antwoordHint;
-	private int maxAntwoordTijd;
+	private int maxAntwoordTijd;  ///ee
 	
 	public Opdracht(){
 	}
