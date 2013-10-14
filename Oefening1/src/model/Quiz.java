@@ -12,7 +12,6 @@ public class Quiz {
 	private QuizStatus quizStatus;
 	private List<Opdracht> opdrachten = new LinkedList<Opdracht>();
 
-	//test
 	public Quiz() {
 	}
 
@@ -65,4 +64,59 @@ public class Quiz {
 			System.out.println(ex);
 		}
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + aantalDeelnames;
+		result = prime * result + leerjaar;
+		result = prime * result + ((leraar == null) ? 0 : leraar.hashCode());
+		result = prime * result
+				+ ((onderwerp == null) ? 0 : onderwerp.hashCode());
+		result = prime * result
+				+ ((opdrachten == null) ? 0 : opdrachten.hashCode());
+		result = prime * result
+				+ ((quizStatus == null) ? 0 : quizStatus.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Quiz other = (Quiz) obj;
+		if (aantalDeelnames != other.aantalDeelnames)
+			return false;
+		if (leerjaar != other.leerjaar)
+			return false;
+		if (leraar != other.leraar)
+			return false;
+		if (onderwerp == null) {
+			if (other.onderwerp != null)
+				return false;
+		} else if (!onderwerp.equals(other.onderwerp))
+			return false;
+		if (opdrachten == null) {
+			if (other.opdrachten != null)
+				return false;
+		} else if (!opdrachten.equals(other.opdrachten))
+			return false;
+		if (quizStatus != other.quizStatus)
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Quiz [aantalDeelnames=" + aantalDeelnames + ", leerjaar="
+				+ leerjaar + ", leraar=" + leraar + ", onderwerp=" + onderwerp
+				+ ", quizStatus=" + quizStatus + ", opdrachten=" + opdrachten
+				+ "]";
+	}
+	
 }
