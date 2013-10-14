@@ -14,6 +14,15 @@ public class Quiz {
 
 	public Quiz() {
 	}
+	
+	public Quiz(int aantalDeelnames, int leerjaar, Leraar leraar, String onderwerp, QuizStatus quizStatus, List<Opdracht> opdrachten) {
+		this.aantalDeelnames = aantalDeelnames;
+		this.leerjaar = leerjaar;
+		this.leraar = leraar;
+		this.onderwerp = onderwerp;
+		this.quizStatus = quizStatus;
+		this.opdrachten = opdrachten;
+	}
 
 	public int getAantalDeelnames() {
 		return aantalDeelnames;
